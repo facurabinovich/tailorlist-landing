@@ -72,10 +72,35 @@
             transform: translateY(0);
         }
 
+        /* ─── INCIDENT BANNER ─── */
+        .incident-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1100;
+            background: #7c3a0a;
+            border-bottom: 1px solid #c05c12;
+            padding: 0.55rem clamp(1.25rem, 4vw, 3rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            color: #fde8d0;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .incident-banner .incident-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
         /* ─── NAVBAR ─── */
         .navbar {
             position: fixed;
-            top: 0;
+            top: 40px;
             left: 0;
             right: 0;
             z-index: 1000;
@@ -163,7 +188,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 100px clamp(1.25rem, 4vw, 3rem) 60px;
+            padding: 140px clamp(1.25rem, 4vw, 3rem) 60px;
             background: linear-gradient(135deg, #0a0a0a 0%, #0f1a0d 25%, #0a0a0a 50%, #0d150b 75%, #0a0a0a 100%);
             background-size: 300% 300%;
             animation: heroGradient 8s ease infinite;
@@ -704,7 +729,7 @@
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 64px;
+            top: 104px;
             left: 0;
             right: 0;
             background: rgba(10, 10, 10, 0.96);
@@ -736,6 +761,12 @@
     </style>
 </head>
 <body>
+
+    <!-- ═══ INCIDENT BANNER ═══ -->
+    <div class="incident-banner">
+        <span class="incident-icon">⚠️</span>
+        <span><strong>Temporary outage:</strong> The app is currently unreachable due to an ongoing Railway infrastructure incident. It will be back automatically once Railway restores service.</span>
+    </div>
 
     <!-- ═══ NAVBAR ═══ -->
     <nav class="navbar">
